@@ -2,9 +2,9 @@
 using namespace std;
 
 class Vettore {
-protected:
+private:
     int dim, len, delta;
-    int *v;
+    public: int * v;
 public:
     Vettore(int dim, int delta) {
         this->dim = dim;
@@ -24,20 +24,29 @@ public:
         v[len] = n;
         len++;
     }
+int getElement( int index ){
+    return v[index];
+}
 
+void setElement( int index, int newvalue ){
+    v[index] = newvalue;
+}
     void print(){
-        cout << "contenuto del vettore:";
+        cout << "contenuto del vettore: ";
         for(int i = 0; i < len; i++) cout << v[i] << " ";
         cout << endl;
     }
 
-    ~Vettore() {
+   ~Vettore() {
         delete[] v; 
     }
 };
 
 int main(int argc, char * argv[]){
-    Vettore vett(10, 2);
-    for(int i = 0; i < 15; i++) vett.add(33 * i);
+    Vettore vett(10, 10);
+    for(int i = 0; i < 100; i++) vett.add(i);
+    vett.getElement(10) << endl;
+    vett.setElement( 10, 333);
+
     vett.print();
 }
