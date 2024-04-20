@@ -1,7 +1,6 @@
 
 #include <iostream>
-
-#include "mastermind.cpp"
+#include "Coda.cpp"
 
 
 using namespace std;

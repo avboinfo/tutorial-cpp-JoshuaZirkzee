@@ -1,10 +1,13 @@
 #include <iostream>
-#include "Classe.cpp"
+#include "UfficioPostale.cpp"
 using namespace std;
 
 
 int main(){
-    Poste prova = Poste(1000);
+    string servizio;
+    cout << "inserisci il servizio";
+    cin >> servizio;
+    UfficioPostale prova = UfficioPostale(servizio);
     string s;
     int c = 0;
     int end = 0;
@@ -17,7 +20,7 @@ int main(){
 
         if (c == 1){
             cin>>s;
-            prova.Enter(i, s);
+            prova.enter(i, s);
         }
         if (c == 2){
 
