@@ -1,6 +1,6 @@
 /*
 Matrice.cpp
-Itrbi Mohamed Amin - 20/04/2024
+Montanari Alessandro - 20/04/2024
 */
 
 #include <iostream>
